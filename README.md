@@ -40,9 +40,9 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 
 # ADMIN CREDENTIALS
 
-Username:Numa
-Email:Nahomtewdorsm@gmail.com
-Password:pandamusic101
+Username:Admin
+Email:adminskyblog@gmail.com
+Password:pass123
 
 ## ✨ **Key Features**
 
@@ -93,11 +93,10 @@ Password:pandamusic101
 
 ## 🏗️ **Architecture & Tech Stack**
 
-<<<<<<< HEAD
-=======
+# <<<<<<< HEAD
 
+> > > > > > > 0427bba1a5ca4f0f072585066de7927aec511b99
 
->>>>>>> 0427bba1a5ca4f0f072585066de7927aec511b99
 ### **Frontend Stack**
 
 \`\`\`
@@ -187,10 +186,10 @@ npm test
 
 \`\`\`bash
 
-<<<<<<< HEAD
-=======
+# <<<<<<< HEAD
 
->>>>>>> 0427bba1a5ca4f0f072585066de7927aec511b99
+> > > > > > > 0427bba1a5ca4f0f072585066de7927aec511b99
+
 # Authentication
 
 JWT_SECRET=the-super-secret-jwt-key

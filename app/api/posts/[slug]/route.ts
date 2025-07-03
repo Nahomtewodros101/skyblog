@@ -3,11 +3,12 @@ import { prisma } from "@/lib/db";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
+    const { slug } = await params; // Await params
     const post = await prisma.post.findUnique({
-      where: { slug: params.slug },
+      where: { slug },
       include: {
         author: {
           select: {
@@ -21,11 +22,7 @@ export async function GET(
         comments: {
           include: {
             author: {
-              select: {
-                name: true,
-                username: true,
-                avatar: true,
-              },
+              select: { name: true, username: true, avatar: true },
             },
           },
           orderBy: { createdAt: "desc" },
@@ -33,18 +30,12 @@ export async function GET(
         likes: {
           include: {
             user: {
-              select: {
-                name: true,
-                username: true,
-              },
+              select: { name: true, username: true },
             },
           },
         },
         _count: {
-          select: {
-            likes: true,
-            comments: true,
-          },
+          select: { likes: true, comments: true },
         },
       },
     });
@@ -54,10 +45,10 @@ export async function GET(
     }
 
     return NextResponse.json(post);
-  } catch (error) {
+  } catch (error: any) {
     console.error("Error fetching post:", error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: error.message || "Failed to fetch post" },
       { status: 500 }
     );
   }
