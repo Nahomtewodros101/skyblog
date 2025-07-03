@@ -184,9 +184,6 @@ npm test
 
 \`\`\`bash
 
-# Database
-
-DATABASE_URL=mongodb+srv://numa:pass123@skyblog.lirorlo.mongodb.net/skyblog?retryWrites=true&w=majority
 
 # Authentication
 
@@ -494,7 +491,7 @@ copies or substantial portions of the Software.
 
 ### **⭐ Star this repository if you found it helpful!**
 
-**Made with ❤️ by [Nahom Tewodros](https://github.com/nahomtewodros) and the Skylink Team**
+**Made with ❤️ by [Nahom Tewodros](https://github.com/Nahomtewodros101) and the Skylink Team**
 
 _Empowering voices, connecting minds, building the future of digital storytelling._
 
