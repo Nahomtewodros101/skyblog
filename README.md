@@ -93,9 +93,7 @@ Password:pass123
 
 ## 🏗️ **Architecture & Tech Stack**
 
-# <<<<<<< HEAD
 
-> > > > > > > 0427bba1a5ca4f0f072585066de7927aec511b99
 
 ### **Frontend Stack**
 
@@ -186,9 +184,7 @@ npm test
 
 \`\`\`bash
 
-# <<<<<<< HEAD
 
-> > > > > > > 0427bba1a5ca4f0f072585066de7927aec511b99
 
 
 
