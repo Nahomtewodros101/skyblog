@@ -22,7 +22,7 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=mongodb://admin:password123@mongodb:27017/blogdb?authSource=admin
+      - DATABASE_URL=mongodb+srv://numa:pass123@skyblog.lirorlo.mongodb.net/?retryWrites=true&w=majority&appName=skyblog
       - JWT_SECRET=your-super-secret-jwt-key-change-in-production
       - NEXTAUTH_URL=http://localhost:3000
     ports:
