@@ -190,11 +190,7 @@ npm test
 
 > > > > > > > 0427bba1a5ca4f0f072585066de7927aec511b99
 
-# Authentication
 
-JWT_SECRET=the-super-secret-jwt-key
-
-JWT_EXPIRES_IN="7d"
 
 ## 📁 **Project Structure**
 
@@ -467,7 +463,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 \`\`\`
 MIT License
 
-Copyright (c) 2024 Skylink Technologies
+Copyright (c) 2025 Skylink Technologies
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
