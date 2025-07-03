@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: blog_mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: blogdb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - blog_network
+
+  app:
+    build: .
+    container_name: blog_app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=mongodb://admin:password123@mongodb:27017/blogdb?authSource=admin
+      - JWT_SECRET=your-super-secret-jwt-key-change-in-production
+      - NEXTAUTH_URL=http://localhost:3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    networks:
+      - blog_network
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+volumes:
+  mongodb_data:
+
+networks:
+  blog_network:
+    driver: bridge
