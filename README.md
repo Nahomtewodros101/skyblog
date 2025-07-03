@@ -17,8 +17,7 @@
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
   [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://github.com/skylinkict/skylink-blog/graphs/commit-activity)
   
-  [🌟 **Live Demo**](https://skylink-blog.vercel.app) •
-  
+  [🌟 **Live Demo**](https://skyblog-sigma.vercel.app/) 
 </div>
 
 ---
@@ -39,6 +38,12 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 
 ---
 
+# ADMIN CREDENTIALS
+
+Username:Numa
+Email:Nahomtewdorsm@gmail.com
+Password:pandamusic101
+
 ## ✨ **Key Features**
 
 <table>
@@ -46,6 +51,7 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 <td width="50%">
 
 ### 🔐 **Authentication & Security**
+
 - JWT-based authentication system
 - Secure password hashing with bcrypt
 - Role-based access control (Admin/User)
@@ -53,6 +59,7 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 - CORS protection and XSS prevention
 
 ### 📝 **Content Management**
+
 - Rich text editor with markdown support
 - Image upload and optimization
 - Draft and publish workflow
@@ -63,6 +70,7 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 <td width="50%">
 
 ### 👥 **User Experience**
+
 - Personalized user dashboards
 - Author profiles and bio pages
 - Social features (likes, comments, follows)
@@ -70,6 +78,7 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 - Reading time estimation
 
 ### 🎨 **Design & Performance**
+
 - Modern, responsive UI/UX
 - Dark/Light mode toggle
 - Smooth animations and transitions
@@ -84,38 +93,39 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 
 ## 🏗️ **Architecture & Tech Stack**
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/skylinkict/skylink-blog/main/docs/architecture-diagram.png" alt="Architecture Diagram" width="800">
-</div>
+
 
 ### **Frontend Stack**
+
 \`\`\`
-🎨 Next.js 15          - React framework with App Router
-⚡ React 18           - UI library with latest features
-🎯 TypeScript         - Type-safe development
-💅 Tailwind CSS       - Utility-first CSS framework
-🧩 Shadcn/ui          - Beautiful, accessible components
-🎭 Framer Motion      - Smooth animations and transitions
+🎨 Next.js 15 - React framework with App Router
+⚡ React 18 - UI library with latest features
+🎯 TypeScript - Type-safe development
+💅 Tailwind CSS - Utility-first CSS framework
+🧩 Shadcn/ui - Beautiful, accessible components
+🎭 Framer Motion - Smooth animations and transitions
 \`\`\`
 
 ### **Backend Stack**
+
 \`\`\`
 🔧 Next.js API Routes - Serverless API endpoints
-🗄️ Prisma ORM         - Type-safe database client
-🍃 MongoDB            - NoSQL database
-🔐 JWT                - Stateless authentication
-📧 Nodemailer         - Email notifications
-🔍 Zod                - Runtime type validation
+🗄️ Prisma ORM - Type-safe database client
+🍃 MongoDB - NoSQL database
+🔐 JWT - Stateless authentication
+📧 Nodemailer - Email notifications
+🔍 Zod - Runtime type validation
 \`\`\`
 
 ### **DevOps & Tools**
+
 \`\`\`
-🐳 Docker             - Containerization
-🧪 Jest               - Unit and integration testing
-📊 ESLint/Prettier    - Code quality and formatting
-🚀 Vercel             - Deployment and hosting
-📈 Analytics          - User behavior tracking
-🔍 Sentry             - Error monitoring
+🐳 Docker - Containerization
+🧪 Jest - Unit and integration testing
+📊 ESLint/Prettier - Code quality and formatting
+🚀 Vercel - Deployment and hosting
+📈 Analytics - User behavior tracking
+🔍 Sentry - Error monitoring
 \`\`\`
 
 ---
@@ -123,94 +133,96 @@ Skylink Blog is a cutting-edge, full-stack blogging platform that empowers write
 ## 🚀 **Quick Start**
 
 ### **Prerequisites**
-- Node.js 18+ 
+
+- Node.js 18+
 - Docker & Docker Compose
 - Git
 
 ### **🐳 Docker Setup (Recommended)**
 
 \`\`\`bash
+
 # Clone the repository
-git clone https://github.com/skylinkict/skylink-blog.git
-cd skylink-blog
+
+git clone https://github.com/Nahomtewodros101/skyblog.git
 
 # Copy environment variables
-cp .env.example .env
+
+cp .env
 
 # Build and start with Docker
+
 docker-compose up --build
 
 # 🎉 Open http://localhost:3000
+
 \`\`\`
 
 ### **💻 Local Development**
 
 \`\`\`bash
+
 # Install dependencies
+
 npm install
 
 # Set up database
+
 npx prisma generate
 npx prisma db push
 
 # Start development server
+
 npm run dev
 
 # Run tests
+
 npm test
 \`\`\`
 
 ### **⚙️ Environment Variables**
 
 \`\`\`bash
+
 # Database
-DATABASE_URL="mongodb://localhost:27017/skylink-blog"
+
+DATABASE_URL=mongodb+srv://numa:pass123@skyblog.lirorlo.mongodb.net/skyblog?retryWrites=true&w=majority
 
 # Authentication
-JWT_SECRET="your-super-secret-jwt-key"
+
+JWT_SECRET=the-super-secret-jwt-key
+
 JWT_EXPIRES_IN="7d"
-
-# Email (Optional)
-SMTP_HOST="smtp.gmail.com"
-SMTP_PORT=587
-SMTP_USER="your-email@gmail.com"
-SMTP_PASS="your-app-password"
-
-# Analytics (Optional)
-GOOGLE_ANALYTICS_ID="GA_MEASUREMENT_ID"
-\`\`\`
-
----
 
 ## 📁 **Project Structure**
 
 \`\`\`
 skylink-blog/
-├── 📱 src/app/                 # Next.js App Router
-│   ├── 🔐 api/                # API endpoints
-│   │   ├── auth/              # Authentication routes
-│   │   ├── posts/             # Post management
-│   │   ├── users/             # User management
-│   │   └── admin/             # Admin operations
-│   ├── 👤 (auth)/             # Authentication pages
-│   ├── 📝 posts/              # Post pages
-│   ├── 👥 authors/            # Author profiles
-│   └── ⚙️ admin/              # Admin dashboard
-├── 🧩 src/components/         # Reusable components
-│   ├── ui/                    # Base UI components
-│   ├── forms/                 # Form components
-│   ├── layout/                # Layout components
-│   └── features/              # Feature-specific components
-├── 🎯 src/contexts/           # React contexts
-├── 🔧 src/lib/                # Utilities & configurations
-│   ├── auth.ts               # Authentication logic
-│   ├── db.ts                 # Database connection
-│   ├── validations.ts        # Zod schemas
-│   └── utils.ts              # Helper functions
-├── 🧪 src/__tests__/          # Test files
-├── 📊 prisma/                 # Database schema
-├── 🐳 docker/                 # Docker configurations
-└── 📚 docs/                   # Documentation
+├── 📱 src/app/ # Next.js App Router
+│ ├── 🔐 api/ # API endpoints
+│ │ ├── auth/ # Authentication routes
+│ │ ├── posts/ # Post management
+│ │ ├── users/ # User management
+│ │ └── admin/ # Admin operations
+│ ├── 👤 (auth)/ # Authentication pages
+│ ├── 📝 posts/ # Post pages
+│ ├── 👥 authors/ # Author profiles
+│ └── ⚙️ admin/ # Admin dashboard
+├── 🧩 src/components/ # Reusable components
+│ ├── ui/ # Base UI components
+│ ├── forms/ # Form components
+│ ├── layout/ # Layout components
+│ └── features/ # Feature-specific components
+├── 🎯 src/contexts/ # React contexts
+├── 🔧 src/lib/ # Utilities & configurations
+│ ├── auth.ts # Authentication logic
+│ ├── db.ts # Database connection
+│ ├── validations.ts # Zod schemas
+│ └── utils.ts # Helper functions
+├── 🧪 src/**tests**/ # Test files
+├── 📊 prisma/ # Database schema
+├── 🐳 docker/ # Docker configurations
+└── 📚 docs/ # Documentation
 \`\`\`
 
 ---
@@ -221,54 +233,58 @@ skylink-blog/
 <summary><strong>🔐 Authentication Endpoints</strong></summary>
 
 \`\`\`typescript
-POST   /api/auth/register      # User registration
-POST   /api/auth/login         # User login
-POST   /api/auth/logout        # User logout
-GET    /api/auth/me            # Get current user
-POST   /api/auth/refresh       # Refresh JWT token
-POST   /api/auth/forgot        # Password reset request
-POST   /api/auth/reset         # Password reset confirmation
+POST /api/auth/register # User registration
+POST /api/auth/login # User login
+POST /api/auth/logout # User logout
+GET /api/auth/me # Get current user
+POST /api/auth/refresh # Refresh JWT token
+POST /api/auth/forgot # Password reset request
+POST /api/auth/reset # Password reset confirmation
 \`\`\`
+
 </details>
 
 <details>
 <summary><strong>📝 Posts Endpoints</strong></summary>
 
 \`\`\`typescript
-GET    /api/posts              # Get all posts (paginated)
-POST   /api/posts              # Create new post
-GET    /api/posts/[slug]       # Get post by slug
-PUT    /api/posts/[id]         # Update post
-DELETE /api/posts/[id]         # Delete post
-GET    /api/posts/trending     # Get trending posts
-GET    /api/posts/featured     # Get featured posts
-POST   /api/posts/[id]/like    # Toggle post like
-GET    /api/posts/[id]/likes   # Get post likes
+GET /api/posts # Get all posts (paginated)
+POST /api/posts # Create new post
+GET /api/posts/[slug] # Get post by slug
+PUT /api/posts/[id] # Update post
+DELETE /api/posts/[id] # Delete post
+GET /api/posts/trending # Get trending posts
+GET /api/posts/featured # Get featured posts
+POST /api/posts/[id]/like # Toggle post like
+GET /api/posts/[id]/likes # Get post likes
 \`\`\`
+
 </details>
 
 <details>
 <summary><strong>💬 Comments Endpoints</strong></summary>
 
 \`\`\`typescript
-GET    /api/posts/[id]/comments    # Get post comments
-POST   /api/posts/[id]/comments    # Add comment
-PUT    /api/comments/[id]          # Update comment
-DELETE /api/comments/[id]          # Delete comment
-POST   /api/comments/[id]/like     # Toggle comment like
+GET /api/posts/[id]/comments # Get post comments
+POST /api/posts/[id]/comments # Add comment
+PUT /api/comments/[id] # Update comment
+DELETE /api/comments/[id] # Delete comment
+POST /api/comments/[id]/like # Toggle comment like
 \`\`\`
+
 </details>
 
 <details>
 <summary><strong>👥 Users Endpoints</strong></summary>
 
 \`\`\`typescript
-GET    /api/users/[username]       # Get user profile
-PUT    /api/users/[id]             # Update user profile
-GET    /api/users/[id]/posts       # Get user posts
-GET    /api/users/[id]/followers   # Get user followers
-POST   /api/users/[id]/follow      # Follow/unfollow user
+GET /api/users/[username] # Get user profile
+PUT /api/users/[id] # Update user profile
+GET /api/users/[id]/posts # Get user posts
+GET /api/users/[id]/followers # Get user followers
+POST /api/users/[id]/follow # Follow/unfollow user
 \`\`\`
+
 </details>
 
 ---
@@ -276,23 +292,30 @@ POST   /api/users/[id]/follow      # Follow/unfollow user
 ## 🧪 **Testing**
 
 \`\`\`bash
+
 # Run all tests
+
 npm test
 
 # Run tests in watch mode
+
 npm run test:watch
 
 # Run tests with coverage
+
 npm run test:coverage
 
 # Run E2E tests
+
 npm run test:e2e
 
 # Run specific test file
+
 npm test -- PostCard.test.tsx
 \`\`\`
 
 ### **Test Coverage**
+
 - ✅ Unit Tests: Components, utilities, API routes
 - ✅ Integration Tests: Database operations, API endpoints
 - ✅ E2E Tests: User workflows, authentication flows
@@ -307,30 +330,39 @@ npm test -- PostCard.test.tsx
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/skylinkict/skylink-blog)
 
 \`\`\`bash
+
 # Install Vercel CLI
+
 npm i -g vercel
 
 # Deploy to Vercel
+
 vercel --prod
 \`\`\`
 
 ### **Docker Production**
 
 \`\`\`bash
+
 # Build production image
+
 docker build -t skylink-blog:latest .
 
 # Run production container
+
 docker run -p 3000:3000 --env-file .env.production skylink-blog:latest
 \`\`\`
 
 ### **Manual Deployment**
 
 \`\`\`bash
+
 # Build the application
+
 npm run build
 
 # Start production server
+
 npm start
 \`\`\`
 
@@ -340,15 +372,15 @@ npm start
 
 <div align="center">
 
-| Metric | Score | Status |
-|--------|-------|--------|
-| **Performance** | 98/100 | 🟢 Excellent |
-| **Accessibility** | 100/100 | 🟢 Perfect |
-| **Best Practices** | 100/100 | 🟢 Perfect |
-| **SEO** | 100/100 | 🟢 Perfect |
-| **PWA** | ✅ | 🟢 Ready |
+| Metric             | Score   | Status       |
+| ------------------ | ------- | ------------ |
+| **Performance**    | 98/100  | 🟢 Excellent |
+| **Accessibility**  | 100/100 | 🟢 Perfect   |
+| **Best Practices** | 100/100 | 🟢 Perfect   |
+| **SEO**            | 100/100 | 🟢 Perfect   |
+| **PWA**            | ✅      | 🟢 Ready     |
 
-*Lighthouse scores on desktop*
+_Lighthouse scores on desktop_
 
 </div>
 
@@ -372,18 +404,21 @@ npm start
 ## 🗺️ **Roadmap**
 
 ### **🎯 Current Sprint (v1.2)**
+
 - [ ] Real-time notifications
 - [ ] Advanced search with filters
 - [ ] Content analytics dashboard
 - [ ] Mobile app (React Native)
 
 ### **🚀 Next Release (v1.3)**
+
 - [ ] Multi-language support (i18n)
 - [ ] Advanced SEO tools
 - [ ] Content scheduling
 - [ ] Social media integration
 
 ### **🌟 Future Plans (v2.0)**
+
 - [ ] AI-powered content suggestions
 - [ ] Advanced analytics and insights
 - [ ] Monetization features
@@ -414,29 +449,12 @@ We welcome contributions from the community! Here's how you can help:
 ### **🐛 Bug Reports**
 
 Found a bug? Please create an issue with:
+
 - Clear description of the problem
 - Steps to reproduce
 - Expected vs actual behavior
 - Screenshots (if applicable)
 - Environment details
-
----
-
-## 📞 **Support & Community**
-
-<div align="center">
-
-### **Get Help & Stay Connected**
-
-[![Discord](https://img.shields.io/badge/Discord-Join%20Community-7289da?style=for-the-badge&logo=discord)](https://discord.gg/skylink-blog)
-[![Twitter](https://img.shields.io/badge/Twitter-Follow%20Us-1da1f2?style=for-the-badge&logo=twitter)](https://twitter.com/skylinkict)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077b5?style=for-the-badge&logo=linkedin)](https://linkedin.com/company/skylinkict)
-
-**📧 Email**: [nahomtewdorsm@gmail.com](mailto:nahomtewdorsm@gmail.com)  
-**🌐 Website**: [skylink-technologies.com](https://skylink-technologies.com)  
-**📱 Instagram**: [@skylink_technologies](https://instagram.com/skylink_technologies)
-
-</div>
 
 ---
 
@@ -478,7 +496,7 @@ copies or substantial portions of the Software.
 
 **Made with ❤️ by [Nahom Tewodros](https://github.com/nahomtewodros) and the Skylink Team**
 
-*Empowering voices, connecting minds, building the future of digital storytelling.*
+_Empowering voices, connecting minds, building the future of digital storytelling._
 
 ---
 
